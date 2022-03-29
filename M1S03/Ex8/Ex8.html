@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta na pagina</title>
+</head>
+<script>
+    function alerta() {
+        var operação = window.prompt("Qual operação deseja realizar");
+        var number_1 = window.prompt("Digite o primeiro número");
+        var number_2 = window.prompt("Digite o Segundo número");
+        
+        if (operação === "+") {
+            var resultado = Number(number_1) + Number(number_2);
+        }
+        if (operação === "-") {
+            var resultado = Number(number_1) - Number(number_2);
+        }
+        if (operação === "*") {
+            var resultado = Number(number_1) * Number(number_2);
+        }
+        if (operação === "/") {
+            var resultado = Number(number_1) / Number(number_2);
+        }
+
+        window.alert("Resultado é " + resultado);
+    }
+</script>
+<body>
+    <input type="button" onclick="alerta()" value="Calculadora">
+    
+</body>
+</html>

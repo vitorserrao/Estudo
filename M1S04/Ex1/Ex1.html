@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação idade </title>
+</head>
+<script>
+    function idade() {
+        var user_age = window.prompt("Qual sua idade")
+        if (Number (user_age) <= 15) {
+            return console.log("Você é jovem");}
+        if (Number(user_age)>64) {
+            return console.log("Você é idoso")}
+        else{
+            return console.log("Você é Adulto")}
+            
+    }
+</script>
+<body>
+    <input type="button" onclick="idade()" value="deseja Continuar?">
+</body>
+</html>
