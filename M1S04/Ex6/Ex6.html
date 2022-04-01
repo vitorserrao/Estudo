@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6</title>
+</head>
+<script>
+    let impares = () => {
+        let contador = 0;
+        let impar = 0;
+        while (impar < 10) {
+            contador ++;
+            (Number(contador)%2 == 0? impar === impar : impar ++)
+            console.log(`Contador: ${contador} e o valor ímpar é: ${impar}$`)
+        }
+    }
+    
+</script>
+<body>
+    <input type="button" onclick="impares()" value="impares">
+</body>
+</html>
