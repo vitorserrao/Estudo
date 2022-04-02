@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex10</title>
+</head>
+<script>
+    const contasClientes = 
+    [{id: 1,saldo: 500,},
+    {id: 2,saldo: 30000,},
+    {id: 3,saldo: 50},];
+    
+const deposito = (valor, id) => {
+    const consulta =(contasClientes.findIndex((obj)=>{return obj.id === id}));
+    saldo = contasClientes[consulta].saldo
+    switch (true) {
+        case (valor <= 0):
+            window.alert("Valor inválido")
+            break; 
+        default:
+            saldo = saldo + valor;
+            window.alert(`deposito feito com sucesso, saldo atual:${saldo}`)
+            break;
+        }
+
+    }
+const sacarDinheiro = (valor, id) =>{
+    const consulta =(contasClientes.findIndex((obj)=>{return obj.id === id}));
+    saldo = contasClientes[consulta].saldo
+    switch (true) {
+        case (valor <= 0):
+            window.alert("Valor inválido")
+            break;
+        case (valor > saldo):
+            window.alert(`saldo insuficiente, saldo atual:${saldo}`)
+            break;
+        case ((saldo > valor) && (valor > 0) ):
+            saldo = saldo - valor;
+            window.alert(`Saque feito com sucesso, saldo atual:${saldo}`)
+            break;  
+        default:
+            break;
+        }
+    }
+
+
+</script>
+<body>
+
+    <input type="button" onclick="sacarDinheiro(1000,2)"" value="saque"> 
+    <input type="button" onclick="deposito(1000,1)" value="deposito"> 
+</body>
+</html>
